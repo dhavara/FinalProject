@@ -26,24 +26,17 @@ class DatabaseSeeder extends Seeder
             'total_distribusi' => 0,
         ]);
 
+
         DB::table('kategori_mustahik')->insert([
-            'nama_kategori' => 'Ghorim',
-            'jumlah_hak' => 4,
+            'nama_kategori' => 'Fakir'
         ]);
 
         DB::table('kategori_mustahik')->insert([
-            'nama_kategori' => 'Fakir',
-            'jumlah_hak' => 1,
+            'nama_kategori' => 'Miskin'
         ]);
 
         DB::table('kategori_mustahik')->insert([
-            'nama_kategori' => 'Miskin',
-            'jumlah_hak' => 2,
-        ]);
-
-        DB::table('kategori_mustahik')->insert([
-            'nama_kategori' => 'Mualaf',
-            'jumlah_hak' => 1,
+            'nama_kategori' => 'Mualaf'
         ]);
 
     }

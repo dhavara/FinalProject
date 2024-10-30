@@ -28,9 +28,9 @@
                         @endif
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
-                                <label for="nama_Lmuzakki">Nama Lengkap Mustahik <span class="text-danger">*</span></label>
+                                <label for="nama_mustahik">Nama Lengkap Mustahik <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input id="nama_muzakki" type="text" class="form-control" name="nama_muzakki"
+                                    <input id="nama_mustahik" type="text" class="form-control" name="nama_mustahik"
                                         required>
                                 </div>
                             </div>
@@ -46,8 +46,8 @@
                             <div class="form-group col-md-4 mb-2">
                                 <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input required id="jumlah_tanggungan" type="text" class="form-control"
-                                        name="jumlah_tanggungan">
+                                    <input required id="kategori_mustahik" type="text" class="form-control"
+                                        name="kategori_mustahik">
                                 </div>
                             </div>
 
