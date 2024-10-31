@@ -31,7 +31,7 @@
                               <li><a class="dropdown-item" href="{{ url('/dashboard/mustahik/create') }}">Atur & Tambah Data Mustahik</a></li>
                           </ul>
                       </li>
-                      <li class="nav-item dropdown">
+                      {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Kategori Mustahik
                           </a>
@@ -39,7 +39,7 @@
                               <li><a class="dropdown-item" href="{{ url('/dashboard/kategori_mustahik/') }}">Semua Kategori Mustahik</a></li>
                               <li><a class="dropdown-item" href="{{ url('/dashboard/kategori_mustahik/create') }}">Tambah Kategori Mustahik</a></li>
                           </ul>
-                      </li>
+                      </li> --}}
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Pengumpulan Zakat
@@ -63,15 +63,16 @@
                   </ul>
               </div>
 
-              <!-- Bagian username dan logout -->
               <div class="mt-4">
                   <div class="media-body">
                       <span>{{ Auth::user()->name }}</span>
                       <p class="mb-0 font-roboto">Pengurus DKM <i class="middle fa fa-angle-down"></i></p>
                   </div>
-                  <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                      <i data-feather="log-out"></i>
-                      <span>Log out</span>
+                  <div>
+                  <a href="#">Pengaturan</a>
+                </div>
+                  <a href="{{ route('logout') }}" class="text-danger" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      <span>Keluar</span>
                   </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf

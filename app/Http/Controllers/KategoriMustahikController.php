@@ -29,7 +29,7 @@ class KategoriMustahikController extends Controller
      */
     public function create()
     {
-        return view('pages.backend.kategori_mustahik.create');
+        return view('admin.kategori_mustahik.create');
     }
 
     /**
@@ -66,7 +66,7 @@ class KategoriMustahikController extends Controller
     {
         $item = KategoriMustahik::findOrFail($id);
 
-        return view('pages.backend.kategori_mustahik.edit', [
+        return view('admin.kategori_mustahik.edit', [
             'item' => $item
         ]);
     }

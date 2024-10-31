@@ -20,7 +20,7 @@ class PengumpulanZakatController extends Controller
     {
         $items = PengumpulanZakat::all();
 
-        return view('admin.pengumpulan_zakat', [
+        return view('admin.pengumpulan_zakat.index', [
             'items' => $items
         ]);
     }
@@ -36,7 +36,7 @@ class PengumpulanZakatController extends Controller
 
         $items = Muzakki::all();
 
-        return view('pages.backend.pengumpulan_zakat.create', compact('items'));
+        return view('admin.pengumpulan_zakat.create', compact('items'));
     }
 
     /**
@@ -101,7 +101,7 @@ class PengumpulanZakatController extends Controller
     {
         $item = PengumpulanZakat::findOrFail($id);
 
-        return view('pages.backend.pengumpulan_zakat.edit', [
+        return view('admin.pengumpulan_zakat.edit', [
             'item' => $item
         ]);
     }

@@ -27,7 +27,7 @@
                             </div>
                         @endif
                         <div class="form-row">
-                            <div class="form-group col-md-6 mb-2">
+                            <div class="form-group mb-2">
                                 <label for="nama_mustahik">Nama Lengkap Mustahik <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="nama_mustahik" type="text" class="form-control" name="nama_mustahik"
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group col-md-6 mb-2">
+                            <div class="form-group mb-2">
                                 <label for="nomor_kk">Nomor Kartu Keluarga <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="nomor_kk" type="text" class="form-control" name="nomor_kk" required>
@@ -43,23 +43,30 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-4 mb-2">
+                            <div class="form-group mb-2">
                                 <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input required id="kategori_mustahik" type="text" class="form-control"
-                                        name="kategori_mustahik">
+                                    <select id="kategori_mustahik" name="kategori_mustahik" class="form-control" required
+                                            onchange="setHakValue()">
+                                        <option value="" disabled selected>Pilih Kategori</option>
+                                        <option value="Fakir" data-hak="1">Fakir — (1)</option>
+                                        <option value="Miskin" data-hak="2">Miskin — (2)</option>
+                                        <option value="Mualaf" data-hak="1">Mualaf — (1)</option>
+                                    </select>
+                                    <!-- Hidden input to store the hak value -->
+                                    <input type="hidden" id="jumlah_hak" name="jumlah_hak" value="">
                                 </div>
                             </div>
 
-                            <div class="form-group col-md-4 mb-2">
+                            <div class="form-group mb-2">
                                 <label for="alamat">Alamat <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input required id="alamat" type="text" class="form-control" name="alamat">
                                 </div>
                             </div>
 
-                            <div class="form-group col-md-4 mb-2">
-                                <label for="handphone">Handphone</label>
+                            <div class="form-group mb-2">
+                                <label for="handphone">Handphone <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input required id="handphone" type="number" class="form-control" name="handphone">
                                 </div>
@@ -68,10 +75,24 @@
 
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary m-r-15" type="submit">Tambah</button>
+                        <button type="submit" class="btn btn-primary" type="submit">Tambah</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        function setHakValue() {
+            // Ambil elemen dropdown dan hidden input
+            const kategoriSelect = document.getElementById('kategori_mustahik');
+            const hakInput = document.getElementById('jumlah_hak');
+
+            // Ambil atribut data-hak dari opsi yang dipilih
+            const selectedHak = kategoriSelect.options[kategoriSelect.selectedIndex].getAttribute('data-hak');
+
+            // Set nilai hidden input dengan nilai hak
+            hakInput.value = selectedHak;
+        }
+    </script>
 @endsection

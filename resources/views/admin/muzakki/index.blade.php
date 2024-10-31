@@ -3,7 +3,18 @@
 
 @section('title', 'Data Muzakki')
 @section('content')
-
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="card card-absolute">
+            <div class="card-header bg-primary">
+                <h3 class="text-white">Data Muzakki</h3>
+            </div>
+            <div class="card-body">
+                <h5>Dibawah ini adalah data muzakki yang telah anda tambahkan.</h5>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container">
         <table class="table">
             <thead>

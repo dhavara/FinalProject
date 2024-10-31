@@ -3,7 +3,18 @@
 
 @section('title', 'Data Mustahik')
 @section('content')
-
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="card card-absolute">
+            <div class="card-header bg-primary">
+                <h3 class="text-white">Data Mustahik</h3>
+            </div>
+            <div class="card-body">
+                <h5>Dibawah ini adalah data mustahik yang telah anda tambahkan.</h5>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container">
         <table class="table">
             <thead>
