@@ -20,7 +20,7 @@ class DistribusiZakatController extends Controller
     {
         $items = DistribusiZakat::all();
 
-        return view('pages.backend.distribusi_zakat.index', [
+        return view('admin.distribusi_zakat.index', [
             'items' => $items
         ]);
     }
@@ -36,7 +36,7 @@ class DistribusiZakatController extends Controller
 
         $items = Mustahik::all();
 
-        return view('pages.backend.distribusi_zakat.create', compact('items'));
+        return view('admin.distribusi_zakat.create', compact('items'));
     }
 
     /**
@@ -109,7 +109,7 @@ class DistribusiZakatController extends Controller
     {
         $item = DistribusiZakat::findOrFail($id);
 
-        return view('pages.backend.distribusi_zakat.edit', [
+        return view('admin.distribusi_zakat.edit', [
             'item' => $item
         ]);
     }
