@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('content')
-@include('includes.sidebar')
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor atque officia numquam facilis at officiis earum, omnis reprehenderit dolorum cum. Eligendi dolores eius labore quasi animi, magni aliquam odit vel.</p>
+    @include('includes.sidebar')
+    <div class="card card-absolute">
+        <div class="card-header bg-primary">
+            <h3 class="text-white">Dashboard</h3>
+        </div>
+        <div class="card-body">
+            <h5>Selamat Datang di Dashboard</h5>
+        </div>
+    </div>
 @endsection
