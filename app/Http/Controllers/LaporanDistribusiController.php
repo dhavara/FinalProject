@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth; // Import Auth facade
 use App\Http\Controllers\Controller;
 use App\Models\DistribusiZakat;
+use App\Models\Mustahik;
 use Illuminate\Http\Request;
 
 class LaporanDistribusiController extends Controller
@@ -16,18 +18,23 @@ class LaporanDistribusiController extends Controller
      */
     public function index()
     {
+        // Get the authenticated user's ID
+        $userId = Auth::id();
+
+        // Fetch total zakat amounts and distribution counts
         $jumlahZakat = DB::table('jumlah_zakat')->first();
-        $totalBeras = $jumlahZakat->jumlah_beras;
+        $totalMustahik = Mustahik::count();
         $totalUang = $jumlahZakat->jumlah_uang;
         $totalDistribusi = $jumlahZakat->total_distribusi;
 
-        $items = DistribusiZakat::all();
+        // Fetch distribution records for the authenticated user
+        $items = DistribusiZakat::where('user_id', $userId)->get(); // Filter by user_id
 
         return view('admin.laporan_distribusi', [
             'items' => $items,
-            'totalBeras' => $totalBeras,
             'totalUang' => $totalUang,
-            'totalDistribusi' => $totalDistribusi
+            'totalDistribusi' => $totalDistribusi,
+            'totalMustahik' => $totalMustahik,
         ]);
     }
 

@@ -17,15 +17,18 @@ class LaporanPengumpulanController extends Controller
     public function index()
     {
         $jumlahZakat = DB::table('jumlah_zakat')->first();
-        $totalBeras = $jumlahZakat->total_beras;
+        $totalMuzakki = DB::table('muzakki')->count();
+        $totalMustahik = DB::table('mustahik')->count();
+
         $totalUang = $jumlahZakat->total_uang;
 
         $items = PengumpulanZakat::all();
 
         return view('admin.laporan_pengumpulan', [
             'items' => $items,
-            'totalBeras' => $totalBeras,
-            'totalUang' => $totalUang
+            'totalUang' => $totalUang,
+            'totalMuzakki'=>$totalMuzakki,
+            'totalMustahik'=>$totalMustahik
         ]);
     }
 
