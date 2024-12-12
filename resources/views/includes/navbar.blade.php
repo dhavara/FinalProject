@@ -50,25 +50,6 @@
                                 Tambah Data Mustahik</a></li>
                     </ul>
                 </li>
-                {{-- <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon"><i class="fas fa-users me-2"></i></span>
-                        <span class="pc-mtext">Kategori Mustahik</span>
-                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                    </a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/kategori_mustahik') }}">
-                                <i class="fas fa-database me-2"></i> Master Data Mustahik
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/kategori_mustahik/create') }}">
-                                <i class="fas fa-user-plus me-2"></i> Atur & Tambah Data Mustahik
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
                 <li class="pc-item pc-caption">
                     <label>
                         <h5 class="title-big">Kelola Distribusi & Pengumpulan Zakat</h5>
@@ -136,56 +117,7 @@
                         <i class="fas fa-chart-pie me-2"></i> Laporan Distribusi Zakat
                     </a>
                 </li>
-                {{-- <li class="pc-item pc-caption">
-                    <label>
-                        <h5 class="title-big">Kelola Data Website</h5>
-                        <small class="sub-title">Berita Acara & Galeri</small>
-                    </label>
-                    <i class="ti ti-apps"></i>
-                </li>
-                <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon"><i class="fas fa-folder-open me-2"></i></span>
-                        <span class="pc-mtext">Artikel & Berita</span>
-                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                    </a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/articles') }}">
-                                <i class="fas fa-table me-2"></i> Data Artikel
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/pengumpulan_zakat/create') }}">
-                                <i class="fas fa-coins me-2"></i> Tulis & Tambah Artikel Baru
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
-
-                {{-- <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon"><i class="fas fa-clipboard-list me-2"></i></span>
-                        <span class="pc-mtext">Distribusi Zakat</span>
-                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                    </a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/distribusi_zakat') }}">
-                                <i class="fas fa-database me-2"></i> Data Distribusi Zakat Fitrah
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a class="pc-link" href="{{ url('/dashboard/distribusi_zakat/create') }}">
-                                <i class="fas fa-plus-circle me-2"></i> Tambah Data Distribusi Zakat Fitrah
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
-
-
             </ul>
-
         </div>
     </div>
 </nav>
@@ -203,30 +135,6 @@
                     <a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse">
                         <i class="ti ti-menu-2"></i>
                     </a>
-                </li>
-                <li class="dropdown pc-h-item d-inline-flex d-md-none">
-                    <a class="pc-head-link head-link-secondary dropdown-toggle arrow-none m-0"
-                        data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
-                        aria-expanded="false">
-                        <i class="ti ti-search"></i>
-                    </a>
-                    <div class="dropdown-menu pc-h-dropdown drp-search">
-                        <form class="px-3">
-                            <div class="form-group mb-0 d-flex align-items-center">
-                                <i data-feather="search"></i>
-                                <input type="search" class="form-control border-0 shadow-none"
-                                    placeholder="Search here. . .">
-                            </div>
-                        </form>
-                    </div>
-                </li>
-                <li class="pc-h-item d-none d-md-inline-flex">
-                    <form class="header-search">
-                        <i data-feather="search" class="icon-search"></i>
-                        <input type="search" class="form-control" placeholder="Search here. . .">
-                        <button class="btn btn-light-secondary btn-search"><i
-                                class="ti ti-adjustments-horizontal"></i></button>
-                    </form>
                 </li>
             </ul>
         </div>

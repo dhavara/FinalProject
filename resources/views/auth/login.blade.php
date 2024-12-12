@@ -92,10 +92,10 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="mb-3 form-check">
+                        {{-- <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Ingat Password</label>
-                        </div>
+                        </div> --}}
                         <button type="submit" class="btn btn-success w-100">Masuk Sekarang →</button>
                     </form>
                     <div class="text-center mt-3">

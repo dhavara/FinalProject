@@ -96,7 +96,7 @@
                         data: 'jumlah_tanggungan',
                         name: 'jumlah_tanggungan',
                         render: function(data) {
-                            return formatRupiah(data); // Format as currency in the table
+                            return (data); // Format as currency in the table
                         }
                     },
                     {
