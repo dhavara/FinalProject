@@ -64,7 +64,7 @@
                     <div class="text-center mb-4">
                         <img src="{{ asset('images/9026074.jpg') }}" alt="Logo" style="width: 50px;">
                     </div>
-                    <h2 class="form-header">Masuk menggunakan akun pengurus DKM</h2>
+                    <h2 class="form-header">Masuk menggunakan akun pengurus</h2>
                     <p class="text-muted text-center mb-4">Masukkan email & password anda untuk login</p>
                     <form id="loginForm" method="POST" action="{{ route('login') }}">
                         @csrf
