@@ -38,7 +38,7 @@
                                         <label for="nama_mustahik">Nama Lengkap Mustahik *</label>
                                         <select class="form-control select2" id="nama_mustahik" name="nama_mustahik"
                                             style="width: 100%;">
-                                            <option value="" selected disabled>Pilih Muzakki yang Terdaftar</option>
+                                            <option value="" selected disabled>Pilih Mustahik yang Terdaftar</option>
                                             @foreach ($items as $m)
                                                 <option value="{{ $m->id }}">{{ $m->nama_mustahik }}</option>
                                             @endforeach

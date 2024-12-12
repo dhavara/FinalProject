@@ -108,7 +108,7 @@
                                 const namaMuzakki = Array.isArray(data.nama_muzakki) && data
                                     .nama_muzakki.length > 0 ?
                                     data.nama_muzakki[0].toUpperCase() :
-                                    'Tidak Diketahui';
+                                    'Tidak Diketahu';
 
                                 return `
                             <div class="d-flex align-items-center">
@@ -143,7 +143,7 @@
                         data: 'jumlah_tanggungan_dibayar',
                         name: 'jumlah_tanggungan_dibayar',
                         render: function(data) {
-                            return `<span>${formatRupiah(data)}</span>`;
+                            return `<span>${(data)}</span>`;
                         }
                     },
                     {

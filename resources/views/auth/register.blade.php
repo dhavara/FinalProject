@@ -50,7 +50,7 @@
                     <div class="text-center mb-4">
                         <img src="{{ asset('images/9026074.jpg') }}" alt="Logo" style="width: 50px;">
                     </div>
-                    <h2 class="form-header">Daftar Akun Pengurus DKM</h2>
+                    <h2 class="form-header">Daftar Akun</h2>
                     <p class="text-muted text-center mb-4">Masukkan informasi anda untuk mendaftar</p>
                     <form id="registerForm" method="POST" action="{{ route('register') }}">
                         @csrf

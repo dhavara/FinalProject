@@ -127,7 +127,7 @@
                                         </div>
                                         <div>
                                             <strong>${data.nama_muzakki}</strong><br>
-                                            <span class="text-muted">Tanggungan: ${formatRupiah(row.jumlah_tanggungan_dibayar)}</span>
+                                            <span class="text-muted">Tanggungan: ${(row.jumlah_tanggungan_dibayar)}</span>
                                         </div>
                                     </div>
                                 `;
@@ -139,7 +139,7 @@
                                         </div>
                                         <div>
                                             <strong>Tidak Diketahui</strong><br>
-                                            <span class="text-muted">Tanggungan: ${formatRupiah(row.jumlah_tanggungan_dibayar)}</span>
+                                            <span class="text-muted">Tanggungan: ${(row.jumlah_tanggungan_dibayar)}</span>
                                         </div>
                                     </div>
                                 `;
@@ -151,7 +151,7 @@
                         data: 'jumlah_tanggungan_dibayar',
                         name: 'jumlah_tanggungan_dibayar',
                         render: function(data) {
-                            return `<span>${formatRupiah(data)}</span>`;
+                            return `<span>${(data)}</span>`;
                         }
                     },
                     { data: 'bayar_uang', name: 'bayar_uang' },
